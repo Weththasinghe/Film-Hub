@@ -1,0 +1,33 @@
+<div class="login-container">
+    <img class="film" src="assets/images/film.png" alt="">
+    <div class="logo">Movies Hub</div><br>
+    <div class="desc">
+        Many people find watching movies both entertaining and a way to reduce stress.
+        Watching movies can make us forget our problems is an alternative to anxiety loss.
+        As previously said,
+        watching movies can have a positive emotional impact
+    </div>
+    <div class="login-form">
+        <div class="form-group">
+            <label for="username">User Name</label>
+            <input  type="text" 
+                    name="username" 
+                    placeholder="login" 
+                    class="form-controler" 
+                    [(ngModel)]="username" />
+        </div>
+        <div class="form-group">
+            <label for="pword">Password</label>
+            <input  type="password" 
+                    name="password" 
+                    placeholder="password" 
+                    class="form-controler" 
+                    [(ngModel)]="password" />
+        </div>
+        <div class="btn-container">
+            <div class="error">{{  errorMsg }}</div>
+            <button type="submit" class="btn btn-dark" (click)="login()">Login</button>
+        </div>
+    </div>
+
+</div>

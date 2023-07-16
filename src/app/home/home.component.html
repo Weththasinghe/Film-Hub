@@ -1,0 +1,73 @@
+<app-header></app-header>
+<div class="home-container">
+    <div class="all-movies">
+        <div class="trading-movies">
+            <div class="top">
+                <h4>Trading Movies</h4>
+                <div class="view-all">View All</div>
+            </div>
+            <div class="movies-thumbnail">
+                <div class="movie" *ngFor="let movie of trendingMovies">
+                    <div class="cover" (click)="goToMovie('rating', movie.id)">
+                        <img [src]="movie.cover" alt="">
+                    </div>
+                    <div class="detail">
+                        <div class="name" (click)="goToMovie('rating',movie.id)">{{ movie.name }}</div>
+                        <div class="rating">
+                            <!-- <spam class="rating-value">{{ movie.rating }}</spam> -->
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="theatre-movies">
+            <div class="top">
+                <h4>Popular in Theatres</h4>
+                <div class="view-all">View All</div>
+            </div>
+            <div class="movies-thumbnail">
+                <div class="movie" *ngFor="let movie of theatreMovies">
+                    <div class="cover" (click)="goToMovie('theater', movie.id)">
+                        <img [src]="movie.cover" alt="">
+                    </div>
+                    <div class="detail">
+                        <div class="name" (click)="goToMovie('theater', movie.id)">{{ movie.name }}</div>
+                        <div class="rating">
+                            <!-- <spam class="rating-value">{{ movie.rating }}</spam> -->
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popular-movies">
+        <h4>All Time Popular</h4>
+        <div class="movies">
+            <div class="movie" *ngFor="let movie of popularMovies">
+                
+                <div class="detail">
+                    <div class="name" (click)="goToMovie('popular', movie.id)">{{ movie.name }}</div>
+                    <div class="rating">
+                        <!-- <spam class="rating-value">{{ movie.rating }}</spam> -->
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all">View All</div>
+        </div>
+    </div>
+</div>
